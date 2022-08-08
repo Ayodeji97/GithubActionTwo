@@ -37,7 +37,8 @@ jobs:
       - name: Build Project
         run: ./gradlew assemble
 
-
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
 
       - name: Restore Cache
         uses: actions/cache@v2
