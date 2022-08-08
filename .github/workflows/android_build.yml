@@ -34,6 +34,9 @@ jobs:
       - name: Build Gradle
         run: ./gradlew build
 
+      - name: Build Project
+        run: ./gradlew assemble
+
 
       - name: Restore Cache
         uses: actions/cache@v2
