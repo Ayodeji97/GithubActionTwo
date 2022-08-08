@@ -37,6 +37,12 @@ jobs:
       - name: Build Project
         run: ./gradlew assemble
 
+      - name: Upload APK
+        run: actions/upload-artifact@v2
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug.apk
+
 
       - name: Restore Cache
         uses: actions/cache@v2
